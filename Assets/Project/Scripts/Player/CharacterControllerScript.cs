@@ -67,23 +67,17 @@ public class CharacterControllerScript : MonoBehaviour
             }
             else if (!stopInput && stopped)
             {
-
                 stopped = false;
-                moveTimer = 0.0f;
             }
 
             Movement(mouseInput, movementVec);
         }
-
-
     }
 
     private void Movement(float mouse, Vector3 movementVec)
     {
-        if (Mathf.Abs(mouse) < stopParameter && move && !stopped)
+        if (move && !stopped)
         {
-            moveTimer -= Time.deltaTime;
-            if (moveTimer <= 0)
             {
                 controller.Move(movementVec);
                 isMoving = true;
@@ -91,7 +85,6 @@ public class CharacterControllerScript : MonoBehaviour
         }
         else
         {
-            moveTimer = returnMoveTime;
             isMoving = false;
         }
     }
@@ -99,12 +92,15 @@ public class CharacterControllerScript : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
-            if (Physics.Raycast(transform.position, transform.forward, LayerMask.NameToLayer("Obstacle")))
+            RaycastHit hit;
+            if (Physics.Raycast(new Ray(transform.position, transform.forward), out hit, LayerMask.NameToLayer("Obstacle")))
             {
-                Debug.DrawLine(transform.position, other.transform.position, Color.red);
-                obstacleLooking = true;
-                currentSpeed = speed / 2;
-                bobbing.currentWalkingBobbingSpeed = bobbing.walkingBobbingSpeed / 2;
+                if (hit.collider == other)
+                {
+                    obstacleLooking = true;
+                    currentSpeed = speed / 2;
+                    bobbing.currentWalkingBobbingSpeed = bobbing.walkingBobbingSpeed / 2;
+                }
             }
             else
             {
