@@ -11,6 +11,7 @@ public class CharacterControllerScript : MonoBehaviour
     public bool activeMovement = true;
     public bool isMoving { get; private set; } = false;
     private bool move = true;
+    private bool stopped = false;
     private bool obstacleLooking = false;
     private bool touchingCollision = false;
     [SerializeField] private float speed = 12f;
@@ -60,14 +61,14 @@ public class CharacterControllerScript : MonoBehaviour
         //MOVEMENT
         if (activeMovement)
         {
-            if (stopInput && move)
+            if (stopInput && !stopped)
             {
-                move = false;
+                stopped = true;
             }
-            else if (!stopInput && !move)
+            else if (!stopInput && stopped)
             {
 
-                move = true;
+                stopped = false;
                 moveTimer = 0.0f;
             }
 
@@ -79,7 +80,7 @@ public class CharacterControllerScript : MonoBehaviour
 
     private void Movement(float mouse, Vector3 movementVec)
     {
-        if (Mathf.Abs(mouse) < stopParameter && move)
+        if (Mathf.Abs(mouse) < stopParameter && move && !stopped)
         {
             moveTimer -= Time.deltaTime;
             if (moveTimer <= 0)
