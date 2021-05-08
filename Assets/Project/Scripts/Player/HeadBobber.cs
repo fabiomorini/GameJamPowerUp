@@ -3,8 +3,9 @@
 public class HeadBobber : MonoBehaviour
 {
     public float walkingBobbingSpeed = 14f;
+    [HideInInspector] public float currentWalkingBobbingSpeed = 0f;
     public float bobbingAmount = 0.05f;
-    public CharacterControllerScript controller;
+    private CharacterControllerScript controller = null;
 
     float defaultPosY = 0;
     float timer = 0;
@@ -14,6 +15,7 @@ public class HeadBobber : MonoBehaviour
     {
         defaultPosY = transform.localPosition.y;
         controller = GetComponentInParent<CharacterControllerScript>();
+        currentWalkingBobbingSpeed = walkingBobbingSpeed;
     }
 
     // Update is called once per frame
