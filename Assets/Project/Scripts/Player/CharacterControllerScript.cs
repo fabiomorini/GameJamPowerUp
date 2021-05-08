@@ -36,6 +36,7 @@ public class CharacterControllerScript : MonoBehaviour
         //LOOK AROUND
         //Get Mouse input
         float mouseInput = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        bool stopInput = Input.GetButton("Stop");
         //Update Body Rotation
         transform.GetComponent<Transform>().Rotate(Vector3.up * mouseInput);
 
@@ -59,6 +60,17 @@ public class CharacterControllerScript : MonoBehaviour
         //MOVEMENT
         if (activeMovement)
         {
+            if (stopInput && move)
+            {
+                move = false;
+            }
+            else if (!stopInput && !move)
+            {
+
+                move = true;
+                moveTimer = 0.0f;
+            }
+
             Movement(mouseInput, movementVec);
         }
 
