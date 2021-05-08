@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharacterControllerScript : MonoBehaviour
 {
     private CharacterController controller = null;
-    [SerializeField] private Transform cameraTransform = null;
     //Look Around Parameters
     public float mouseSensitivity = 100f;
     //Movement Prameters

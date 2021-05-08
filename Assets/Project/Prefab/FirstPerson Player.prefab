@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a6dc8a212cbef4fad523dd95726d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 8974928900897931677}
   mouseSensitivity: 70
   activeMovement: 1
   speed: 12
@@ -242,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7fbd6059f66837478fa133d3a602550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bobbing: 1
   bobbingSpeed: 0.1
   bobbingAmount: 0.1
-  midpoint: 0.9
 --- !u!81 &8974928900897931679
 AudioListener:
   m_ObjectHideFlags: 0
