@@ -201,7 +201,7 @@ MonoBehaviour:
     m_Value: 1
   colorMode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   color:
     m_OverrideState: 1
     m_Value: {r: 0.13207549, g: 0.1302065, b: 0.1302065, a: 1}
