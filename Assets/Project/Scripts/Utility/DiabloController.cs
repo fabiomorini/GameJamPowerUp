@@ -6,7 +6,6 @@ public class DiabloController : MonoBehaviour
 {
     private CameraShake shake;
 
-
     private void Start()
     {
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CameraShake>(); 
