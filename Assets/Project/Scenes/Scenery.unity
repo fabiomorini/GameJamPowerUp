@@ -428,28 +428,8 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 37a5f9cad265f9942873ccdf297d46f5, type: 3}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 21.184711
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
       propertyPath: MinDistance
       value: 6.6336546
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.677
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
@@ -10026,28 +10006,8 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5ff2fe652e332b34598dae208d77658b, type: 3}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 21.184711
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
       propertyPath: MinDistance
       value: 6.6336546
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.677
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
@@ -10863,28 +10823,8 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 37a5f9cad265f9942873ccdf297d46f5, type: 3}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 21.184711
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
       propertyPath: MinDistance
       value: 6.6336546
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.677
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
@@ -12825,28 +12765,8 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d5d868a34d4708d4dab6c344aad00f55, type: 3}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 21.184711
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
       propertyPath: MinDistance
       value: 6.6336546
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.677
-      objectReference: {fileID: 0}
-    - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572261018712156700, guid: 5289e00035b264e40a0e1966c2d3c038,
         type: 3}
