@@ -20,7 +20,7 @@ public class CharacterControllerScript : MonoBehaviour
     private float moveTimer = 0.0f;
     private Vector3 velocity = Vector3.one;
     bool stopInput;
-
+    private bool stopTimer;
     private HeadBobber bobbing = null;
 
     private void Start()
@@ -29,48 +29,58 @@ public class CharacterControllerScript : MonoBehaviour
         bobbing = GetComponentInChildren<HeadBobber>();
         moveTimer = returnMoveTime;
         currentSpeed = speed;
+        stopTimer = true;
+        StartCoroutine(StartGame());
     }
 
 
+    private IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(2.1f);
+        stopTimer = false;
+    }
+
     private void Update()
     {
-        //LOOK AROUND
-        //Get Mouse input
-        float mouseInput = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        stopInput = Input.GetButton("Stop");
-        //Update Body Rotation
-        transform.GetComponent<Transform>().Rotate(Vector3.up * mouseInput);
+            //LOOK AROUND
+            //Get Mouse input
+            float mouseInput = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            stopInput = Input.GetButton("Stop");
+            //Update Body Rotation
+            transform.GetComponent<Transform>().Rotate(Vector3.up * mouseInput);
 
-        //Set Movement vector
-        Vector3 movementVec = transform.forward * currentSpeed * Time.deltaTime;
+            //Set Movement vector
+            Vector3 movementVec = transform.forward * currentSpeed * Time.deltaTime;
 
-        //OBSTACLE SLOW DOWN
-        if (touchingCollision)
+            //OBSTACLE SLOW DOWN
+            if (touchingCollision)
+            {
+                if (obstacleLooking)
+                {
+                    move = false;
+                }
+                else
+                {
+                    move = true;
+                    touchingCollision = false;
+                }
+            }
+        if (!stopTimer)
         {
-            if (obstacleLooking)
+            //MOVEMENT
+            if (activeMovement)
             {
-                move = false;
-            }
-            else
-            {
-                move = true;
-                touchingCollision = false;
-            }
-        }
+                if (stopInput && !stopped)
+                {
+                    stopped = true;
+                }
+                else if (!stopInput && stopped)
+                {
+                    stopped = false;
+                }
 
-        //MOVEMENT
-        if (activeMovement)
-        {
-            if (stopInput && !stopped)
-            {
-                stopped = true;
+                Movement(mouseInput, movementVec);
             }
-            else if (!stopInput && stopped)
-            {
-                stopped = false;
-            }
-
-            Movement(mouseInput, movementVec);
         }
     }
 
