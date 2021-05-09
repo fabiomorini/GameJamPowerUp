@@ -98,19 +98,6 @@ public class CharacterControllerScript : MonoBehaviour
             isMoving = false;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.layer == LayerMask.NameToLayer("PreEndGame"))
-        {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().PreLoad();
-        }
-        if (other.gameObject.layer == LayerMask.NameToLayer("EndGame"))
-        {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().Load();
-        }
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
