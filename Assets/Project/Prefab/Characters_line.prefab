@@ -6590,7 +6590,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6445845908703138976}
   - component: {fileID: 7519958400563613113}
-  m_Layer: 0
+  - component: {fileID: 3221299330065763747}
+  m_Layer: 8
   m_Name: Characters_line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6708,6 +6709,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 35.870434, y: 5.7440796, z: 7.3611465}
   m_Center: {x: -10.53311, y: 2.3720398, z: 3.1805732}
+--- !u!65 &3221299330065763747
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8059885700571865710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 37.97417, y: 7.254326, z: 15.063636}
+  m_Center: {x: -10.595581, y: 3.127163, z: 3.6263795}
 --- !u!1 &8142793925601917169
 GameObject:
   m_ObjectHideFlags: 0
