@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameController : MonoBehaviour
     public bool garsaScene { get; private set; } = false;
 
     private bool isTimer = true;
+
+    AsyncOperation asyncOperation = null;
+    private bool loading = false;
 
     private void Start()
     {
@@ -73,6 +77,28 @@ public class GameController : MonoBehaviour
                 gotBad = true;
             }
         }
-
     }
+
+    public void PreLoad()
+    {
+        if (!loading) StartCoroutine("LoadScene");
+        loading = true;
+    }
+
+    public void Load()
+    {
+        asyncOperation.allowSceneActivation = true;
+    }
+
+    IEnumerator LoadScene()
+    {
+        yield return null;
+
+        //Begin to load the Scene you specify
+        asyncOperation = SceneManager.LoadSceneAsync("CutScene");
+        //Don't let the Scene activate until you allow it to
+        asyncOperation.allowSceneActivation = false;
+    }
+
+
 }
