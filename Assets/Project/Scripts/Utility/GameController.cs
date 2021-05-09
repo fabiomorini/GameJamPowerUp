@@ -17,9 +17,6 @@ public class GameController : MonoBehaviour
 
     private bool isTimer = true;
 
-    private bool loading = false;
-    private AsyncOperation asyncOperation;
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -78,24 +75,9 @@ public class GameController : MonoBehaviour
             }
         }
     }
-    public void PreLoad()
-    {
-        if (!loading) StartCoroutine("LoadScene");
-        loading = true;
-    }
 
     public void Load()
     {
-        asyncOperation.allowSceneActivation = true;
-    }
-
-    IEnumerator LoadScene()
-    {
-        yield return null;
-
-        //Begin to load the Scene you specify
-        asyncOperation = SceneManager.LoadSceneAsync("CutScene");
-        //Don't let the Scene activate until you allow it to
-        asyncOperation.allowSceneActivation = false;
+        GameObject.Find("Fade").GetComponent<FadeScenes>().PlayLevel();
     }
 }
