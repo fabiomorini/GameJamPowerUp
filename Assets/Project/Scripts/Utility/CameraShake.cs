@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
     private Animator camAnim;
-    [SerializeField] private AudioClip burnAudio = null;
+    public AudioClip[] burnAudio;
     private AudioSource audioSource;
 
     private void Start()
@@ -26,6 +26,7 @@ public class CameraShake : MonoBehaviour
 
     public void BurnSound()
     {
-        audioSource.PlayOneShot(burnAudio, 1.0f);
+        int random = Random.Range(0, 4);
+        audioSource.PlayOneShot(burnAudio[random], 2.0f);
     }
 }
