@@ -16,7 +16,6 @@ public class CharacterControllerScript : MonoBehaviour
     private bool touchingCollision = false;
     [SerializeField] private float speed = 12f;
     private float currentSpeed = 0f;
-    [SerializeField] private float stopParameter = 0.2f;
     [SerializeField] private float returnMoveTime = 1.0f;
     private float moveTimer = 0.0f;
     private Vector3 velocity = Vector3.one;
