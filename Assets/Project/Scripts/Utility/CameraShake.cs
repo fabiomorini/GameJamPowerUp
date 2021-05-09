@@ -10,5 +10,4 @@ public class CameraShake : MonoBehaviour
     {
         canAnim.SetTrigger("Shake");
     }
-
 }
