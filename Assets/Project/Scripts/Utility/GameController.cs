@@ -62,22 +62,11 @@ public class GameController : MonoBehaviour
                 gotNormal = true;
             }
         }
-        else if (gameTimer > normalEnding)
-        {
-            if (!gotBad)
-            {
-                dracScene = false;
-                garsaScene = false;
-                gotBad = false;
-                isTimer = false;
-
-                gotBad = true;
-            }
-        }
     }
 
     public void Load()
     {
+        DontDestroyOnLoad(this);
         GameObject.Find("Fade").GetComponent<FadeScenes>().PlayLevel();
     }
 }

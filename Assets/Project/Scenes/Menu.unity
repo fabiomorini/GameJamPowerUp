@@ -1958,7 +1958,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a7ca8e7d579356644b96d72c273ac39f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2331,7 +2331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE9dits"
+  m_text: "Cr\xE8dits"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 323fcf547ebe9724aaa1ece3033eee56, type: 2}
   m_sharedMaterial: {fileID: 6860675213846567051, guid: 323fcf547ebe9724aaa1ece3033eee56,
