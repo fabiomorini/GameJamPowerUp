@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
     private void LateUpdate()
     {
         if (isTimer) gameTimer += Time.deltaTime;
-        Debug.Log("Game Timer: " + gameTimer);
+        //Debug.Log("Game Timer: " + gameTimer);
 
         if (gameTimer <= perfectEnding)
         {
