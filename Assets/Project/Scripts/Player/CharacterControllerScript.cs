@@ -19,6 +19,7 @@ public class CharacterControllerScript : MonoBehaviour
     [SerializeField] private float returnMoveTime = 1.0f;
     private float moveTimer = 0.0f;
     private Vector3 velocity = Vector3.one;
+    bool stopInput;
 
     private HeadBobber bobbing = null;
 
@@ -36,7 +37,7 @@ public class CharacterControllerScript : MonoBehaviour
         //LOOK AROUND
         //Get Mouse input
         float mouseInput = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        bool stopInput = Input.GetButton("Stop");
+        stopInput = Input.GetButton("Stop");
         //Update Body Rotation
         transform.GetComponent<Transform>().Rotate(Vector3.up * mouseInput);
 

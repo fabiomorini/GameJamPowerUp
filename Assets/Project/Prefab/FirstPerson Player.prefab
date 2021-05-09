@@ -163,7 +163,6 @@ MonoBehaviour:
   mouseSensitivity: 70
   activeMovement: 1
   speed: 4
-  stopParameter: 0.35
   returnMoveTime: 0.45
 --- !u!1 &8974928900897931678
 GameObject:
@@ -179,6 +178,7 @@ GameObject:
   - component: {fileID: 502786768694641168}
   - component: {fileID: 8974928900897931679}
   - component: {fileID: 4750890819333359256}
+  - component: {fileID: 5631104272517977094}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -373,3 +373,22 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!95 &5631104272517977094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974928900897931678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95cacd0a5972f3047bee5bfb8a7352fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
