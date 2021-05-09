@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  m_DefaultScenePrefabSaved: {fileID: 5692680661202116567, guid: 68877cc5f49107b478169eb96aa3e67f,
+  m_DefaultScenePrefabSaved: {fileID: 5823510469358171751, guid: c1e9d29ca23875c41b005303448a5cba,
     type: 3}
   m_DefaultDXRScenePrefabSaved: {fileID: 0}
   m_ProjectSettingFolderPath: HDRPDefaultResources
