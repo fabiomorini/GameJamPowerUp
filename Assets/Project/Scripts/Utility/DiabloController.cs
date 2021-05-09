@@ -8,7 +8,7 @@ public class DiabloController : MonoBehaviour
 
     private void Start()
     {
-        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CameraShake>(); 
+        shake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>(); 
     }
 
     private void OnTriggerEnter(Collider other)
